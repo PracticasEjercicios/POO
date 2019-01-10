@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		const Persona = () => {
+			let propiedades = {
+				ojos: 2,
+				color_ojos: 'negro',
+				extremidades: 4,
+				saltar: () => console.log('2 metros')
+			}
+
+			return {
+				propiedades,
+				setOjos: (cantidad) => propiedades.ojos = cantidad,
+				setSaltar: (cantidad) => propiedades.saltar = () => console.log(`${cantidad} metros`),
+				setColorOjos: (color) => propiedades.color_ojos = color
+			};
+		};
+
+		let Rodo = Persona();
+		let Rey = Persona();
+
+		// Rey.setOjos(5);
+		// Rey.setColorOjos('verdes');
+		// Rodo.setSaltar(70);
+
+		// Rodo.propiedades.saltar();
+		// Rey.propiedades.saltar();
+
+		// console.log(Rey);
+		// console.log(Rodo);
+
+
+		const Animal = () => {
+			propiedades = {};
+			return {
+				propiedades,
+				setColor: (color) => propiedades.color = color,
+				setAccion: (accion) => propiedades.accion = accion,
+				imprimir: () => console.log(`Este animal es de color ${propiedades.color} y su acción es ${propiedades.accion}`)
+			}
+		};
+
+		let Gato = Animal();
+		let Perro = Animal();
+		let Pez = Animal();
+		let Tortuga = Animal();
+
+		Gato.setColor('naranja');
+		Gato.setAccion('maullar');
+		Gato.imprimir();
+
+		Perro.setColor('cafe');
+		Perro.setAccion('ladrar');
+		Perro.imprimir();
+
+		Pez.setColor('amarillo');
+		Pez.setAccion('nadar');
+		Pez.imprimir();
+
+		Tortuga.setColor('verde');
+		Tortuga.setAccion('ser lenta');
+		Tortuga.imprimir();
+
+	</script>
+
+</body>
+</html>
